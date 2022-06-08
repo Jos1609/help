@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Me invitas</title>
+  <style>
+    .body {
+      background-color: aqua;
+      text-align: center;
+    }
+    .body__title{
+      color:black;
+    }
+    .body__img{
+      width: 100%;
+      border-radius: 50%;
+    }
+
+  </style>
+
+</head>
+
+<body class="body">
+    <h1 class="body__title"> ¿Me invitas un cevichito? </h1>
+      <img
+        src="https://t2.rg.ltmcdn.com/es/posts/7/4/1/ceviche_peruano_18147_600.jpg"
+        alt="Imagen del amor" class="body__img"/>
+    <button id = "yes">si ☻</button>
+    <button id="no">😭Nel Perro😭</button>
+  
+
+  <script>
+    const btnsi = document.getElementById('yes');
+    const btno = document.getElementById('no');
+
+    const somos = () =>{
+      alert('Wow enserio, ¿cuándo y dónde?');
+      alert('Sabía que dirías que sí');
+      location.href = 'https://www.youtube.com/watch?v=oU3y4FnXZpc'
+    }
+    const evitar = () =>{
+      btno.style.position = 'absolute';
+      btno.style.top = (Math.random() * window.innerHeight) + 'px';
+      btno.style.left = (Math.random() * window.innerWidth) + 'px';
+
+    }
+    btnsi.addEventListener('click',somos);
+    btno.addEventListener('mouseover', evitar);
+
+  </script>
+</body>
+
+</html>
